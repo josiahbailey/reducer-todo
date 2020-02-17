@@ -1,10 +1,12 @@
 import React from 'react';
 import TodoCard from './todoCard'
 
-const TodoList = () => {
+const TodoList = ({ toggleCompleted, todoData }) => {
     return (  
         <div>
-            List
+            {todoData.map(todo => (
+                <TodoCard toggleCompleted={toggleCompleted} todo={todo}/>
+        ))}
         </div>
     );
 }
