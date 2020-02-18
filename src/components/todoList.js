@@ -5,7 +5,7 @@ const TodoList = ({ toggleCompleted, todoData }) => {
     return (  
         <div>
             {todoData.map(todo => (
-                <TodoCard toggleCompleted={toggleCompleted} todo={todo}/>
+                <TodoCard key={todo.id} toggleCompleted={toggleCompleted} todo={todo}/>
         ))}
         </div>
     );
