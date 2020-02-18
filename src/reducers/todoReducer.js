@@ -25,21 +25,20 @@ export const todoReducer = (state, action) => {
             toggle_arr.forEach(todo => {
                 if (todo.id === action.payload) {
                     todo.completed = !todo.completed
-                } 
+                }
             })
             return {
                 ...state,
                 data: toggle_arr
             }
         case 'CLEAR_COMPLETED':
-            const clear_arr = state.data.filter(todo => todo.completed === false && todo.item !== undefined && todo.item !== '')
-            console.log(clear_arr)
+            const clear_arr = state.data.filter(todo => todo.completed === false)
             return {
                 ...state,
                 data: clear_arr
             }
 
-        default: 
+        default:
             return state;
     }
 }
