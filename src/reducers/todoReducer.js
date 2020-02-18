@@ -32,8 +32,8 @@ export const todoReducer = (state, action) => {
                 data: toggle_arr
             }
         case 'CLEAR_COMPLETED':
-            const clear_arr = state.data.filter(todo => todo.completed === false)
-            
+            const clear_arr = state.data.filter(todo => todo.completed === false && todo.item !== undefined && todo.item !== '')
+            console.log(clear_arr)
             return {
                 ...state,
                 data: clear_arr

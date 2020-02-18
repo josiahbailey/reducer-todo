@@ -19,7 +19,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className='app'>
       <TodoForm clearCompleted={clearCompleted} newTodo={newTodo} />
       <TodoList toggleCompleted={toggleCompleted} todoData={state.data} />
     </div>

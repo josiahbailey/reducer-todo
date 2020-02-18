@@ -12,10 +12,28 @@ code {
     monospace;
 }
 
-.App {
+.app {
   text-align: center;
+}
+
+.card { 
+  margin: 2% auto;
+  width: 26%;
+  height: 10vh;
+  color: white;
+  background: seagreen;
+}
+.card h2 {
+  margin: auto 0;
+}
+
+.list {
+  display: flex;
+  justify-items: space-evenly;
+  flex-wrap: wrap;
 }
 
 .completed {
   text-decoration: line-through;
+  background-color: darkgreen;
 }
