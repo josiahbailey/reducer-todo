@@ -4,9 +4,9 @@ import TodoCard from './todoCard'
 const TodoList = ({ toggleCompleted, todoData }) => {
     return (
         <div className='list'>
-            {todoData.map(todo => (
-                <TodoCard key={todo.id} toggleCompleted={toggleCompleted} todo={todo} />
-            ))}
+            {todoData.map(todo => {
+                return  <TodoCard key={todo.id} toggleCompleted={toggleCompleted} todo={todo} />
+        })}
         </div>
     );
 }

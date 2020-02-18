@@ -7,7 +7,9 @@ const TodoForm = ({ newTodo, clearCompleted }) => {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        newTodo(todo)
+        if (todo !== '') {
+            newTodo(todo)
+        }
         setTodo('')
     }
     return (

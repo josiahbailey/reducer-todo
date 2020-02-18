@@ -12,20 +12,10 @@ const TodoCard = ({ todo, toggleCompleted }) => {
         completed ? setToggle('card completed') : setToggle('card')
     }, [completed])
 
-    const renderCard = () => {
-        if (todo.item !== undefined && todo.item !== '') {
-            return (
-                <div onClick={changeToggle} className={toggle}>
-                    <h2 className='todo-h2'>{item}</h2>
-                </div>
-            )
-        }
-    }
-
     return (
-        <>
-            {renderCard()}
-        </>
+        <div onClick={changeToggle} className={toggle}>
+            <h2 className='todo-h2'>{item}</h2>
+        </div>
     );
 }
 

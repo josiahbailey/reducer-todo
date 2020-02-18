@@ -17,7 +17,6 @@ export const todoReducer = (state, action) => {
                 id: Date.now()
             }
             return {
-                todo: newTodo,
                 data: [...state.data, newTodo]
             }
         case 'TOGGLE_COMPLETED':
